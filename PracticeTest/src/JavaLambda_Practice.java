@@ -1,0 +1,19 @@
+@FunctionalInterface
+interface Todo {
+	String method(String string);
+}
+
+
+public class JavaLambda_Practice {
+
+	public static void main(String[] args) {
+		Todo todo = m -> m.concat("hgjgjg");
+		System.out.println(add("neha", todo));
+
+	}
+
+	public static String add(String string, Todo todo) {
+		return todo.method(string);
+	}
+
+}
